@@ -100,7 +100,7 @@ karto::LaserRangeFinder * LaserAssistant::makeLaser(const double & mountingYaw)
   laser->SetOffsetPose(karto::Pose2(laser_pose_.transform.translation.x,
     laser_pose_.transform.translation.y, mountingYaw));
 
-  double min_laser_range = 25;
+  double min_laser_range = 0.0;
   if (!node_->has_parameter("min_laser_range")) {
     node_->declare_parameter("min_laser_range", min_laser_range);
   }
